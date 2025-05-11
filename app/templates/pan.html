@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+        form{
+           margin-left: 40%;
+           }
+        input{
+                height: 40px;
+                width: 300px;
+                border: 2px solid;
+                border-radius: 5px;
+        }
+        #btn1{
+        height: 40px;
+        width: 100px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        border-radius: 10px;
+        }
+</style>
+</head>
+<body>
+<div style="background-color: orange; height: 90px;">
+        <img style="margin-top: 20px; margin-left: 100px;" src="https://www.onlineservices.nsdl.com/paam/assets/images/logo_light.png" alt="">
+</div>
+<div style="background-color: wheat; height: 50px; margin-top: -18px; ">
+     <h3 style="margin-left: 150px; padding-top: 15px;"><a href="{% url 'home_page' %}">Home</a></h3>
+</div>
+
+<h1 style="text-align: center; color: rgb(53, 53, 121);">Download Your Pan Card</h1>
+<br>
+<form action="" method="post">
+     {% csrf_token %}
+     <input type="number" name="aadhar" placeholder="Enter your aadhar number" id="">
+<button type="submit" id="btn1">Search</button>
+</form>
+
+</body>
+</html>
+
+

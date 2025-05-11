@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <style>
+          #div1{
+               display: flex;
+               justify-content: space-evenly;
+               width: 900px;
+               margin-left: 28%;
+          }
+          #div1>div{
+               box-shadow: 10px 10px 10px grey;
+          }
+          .div2{
+               border: 2px solid; 
+               height: 920px; 
+               width: 400px;    
+          }
+          #flag{
+               height: 100px;
+               background-image: url(https://img.freepik.com/premium-vector/india-flag-vector-illustration-with-accurate-color-code-paper-textured_650065-157.jpg);
+               background-size: 180px; 
+               text-align: center;
+          }
+          #div3,#div5{
+               display: flex;
+               justify-content: space-between;
+               margin: 0px 40px;
+          }
+         #ind{
+          margin-top: -40px;
+          margin-left: 120px;
+         }
+         #div4{
+          display: flex;
+          justify-content: space-evenly;
+         }
+         .qrcode{
+          margin-top: -500px;
+          margin-left: 250px;
+          
+         }
+     </style>
+
+     <div id="div1" >
+          <div class="div2"> 
+               <div style="display: flex; justify-content: space-between;margin: 0px 40px;">
+                    <img src="https://up.yimg.com/ib/th?id=OIP.alzrYM2sQ2V2On8TxtrsywHaHa&pid=Api&rs=1&c=1&qlt=95&w=103&h=103" height="60px" width="50px" alt="National emblem">
+                    <img src="https://up.yimg.com/ib/th?id=OIP.HwLawVYx7TxGVUqkQJ60MAHaEx&pid=Api&rs=1&c=1&qlt=95&w=168&h=108" height="60px" width="70px" alt="aadhar logo">
+               
+               </div>
+               <div id="flag">
+                    <h3 style="color: red;">Unique Identification Authority of India</h3>
+                    <h2>Government of India</h2>
+               </div>
+     
+               <div style="margin-left: 15px;">
+                    <p>To:</p>
+                    <p>{{data.last_name}} {{data.first_name}}</p>
+                    <p>D/o {{data.father_name}}</p>
+                    <p>{{data.address}}</p>
+                    <p>{{data.state}}-{{data.pin_code}}</p>
+                    <img class="qrcode" height="100px" width="100px" src="https://tse4.mm.bing.net/th?id=OIP.ZFt9Ib6ypFgdYK14UxUAhwHaHa&pid=Api&P=0&h=180"  alt="">
+                    <h2 style="text-align: center;">Your Aadhar number:</h2>
+                    <h1 style="text-align: center;">{{data.aadhar_number}}</h1>
+               </div>
+               
+               <h2 style="text-align: center; color: orangered;"><u>Aadhar -Saamanyuni Hakku</u></h2>
+               <p>---------------------------------------------------------------------------</p>
+               <div id="div3">
+                    <img src="https://up.yimg.com/ib/th?id=OIP.alzrYM2sQ2V2On8TxtrsywHaHa&pid=Api&rs=1&c=1&qlt=95&w=103&h=103" height="60px" width="50px" alt="National emblem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhC3646IOQZVnEyFcn3YRKBb0GYFm63t9NWQ&s" height="60px" width="240px" alt="flag">
+               </div>
+               <h3 id="ind">GOVERNMENT OF INDIA</h3>
+               <div id="div4">
+                    <div> <br>
+                        <img src="{{data.photo.url}}" height="120px" width="120px" alt="">
+                    </div>
+                    <div>
+                         <p>{{data.last_name}} {{data.first_name}}</p>
+                         <p>Date of birth : {{data.DOB}}</p>
+                         <p>Gender : {{data.gender}}</p>
+                         <h2>{{data.aadhar_number}}</h2>
+                    </div>
+               </div>
+               <p style="border: 3px solid orangered;"></p>
+               <h2 style="text-align: center; color: orangered;"><u>Aadhar -Saamanyuni Hakku</u></h2>
+          </div>
+
+          <div class="div2" >
+               <br>
+               <div id="div5">
+                    <img src="https://up.yimg.com/ib/th?id=OIP.alzrYM2sQ2V2On8TxtrsywHaHa&pid=Api&rs=1&c=1&qlt=95&w=103&h=103" height="60px" width="50px" alt="National emblem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhC3646IOQZVnEyFcn3YRKBb0GYFm63t9NWQ&s" height="60px" width="200px" alt="">
+                    <img src="https://up.yimg.com/ib/th?id=OIP.HwLawVYx7TxGVUqkQJ60MAHaEx&pid=Api&rs=1&c=1&qlt=95&w=168&h=108" height="60px" width="70px" alt="aadhar logo">
+               </div>
+               <br>
+               <div style="margin: 110px 15px;">
+                    <h2 style="color: red; text-align: center;">Instructions</h2>
+                    <ul>
+                         <li><p>Aadhar is a proof of identity, not of citizenship</p></li>
+                         <li><p>To establish identity ,Authenticate online</p></li>
+                         <li><p>In case any help required:</p></li>
+                    </ul>
+                    <div style="text-align: center;">
+                    <p>call us :1800 180 1947 or</p>
+                    <p>Write a P.O.Box No. 1947 Bengaluru -560 001 or</p>
+                    <p>Email:help@uidai.gov.in</p>
+                    </div>
+               </div>
+               <p>---------------------------------------------------------------------------</p>
+               <div >
+                    <img src="https://up.yimg.com/ib/th?id=OIP.HwLawVYx7TxGVUqkQJ60MAHaEx&pid=Api&rs=1&c=1&qlt=95&w=168&h=108" height="60px" width="70px" alt="aadhar logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhC3646IOQZVnEyFcn3YRKBb0GYFm63t9NWQ&s" height="60px" width="240px" alt="flag">
+               </div>
+               <h5 style="margin-top: -40px; margin-left: 70px;">UNIQUE IDENTIFICATION AUTHORITY OF INDIA</h5>
+               <br>
+               <img class="qrcode" style="position: relative; top: 130px;" height="100px" width="100px" src="https://tse4.mm.bing.net/th?id=OIP.ZFt9Ib6ypFgdYK14UxUAhwHaHa&pid=Api&P=0&h=180"  alt="qrcode">
+
+               <div style="margin-left: 15px; margin-bottom: 27px;">
+                    <p>D/o {{data.father_name}}</p>
+                    <p>Address : </p>
+                    <p>{{data.address}}</p>
+                    <p>{{data.state}}-{{data.pin_code}}</p>
+                    <p></p>
+               </div>
+               <!-- <img class="qrcode" style="position: relative; top: -40px;" height="100px" width="100px" src="https://tse4.mm.bing.net/th?id=OIP.ZFt9Ib6ypFgdYK14UxUAhwHaHa&pid=Api&P=0&h=180"  alt=""> -->
+
+
+               <p style="border: 3px solid orangered;"></p>
+               <h2 style="text-align: center; color: orangered;"><u>Aadhar -Saamanyuni Hakku</u></h2>
+          </div>
+     </div>
+     
+</body>
+</html>

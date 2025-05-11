@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+         label{
+          font-size: 20px;
+         }
+         input,select{
+          height:40px;
+          width: 300px;
+          border-radius: 4px;
+         }
+         textarea{
+          height: 50px;
+          width: 290px;
+          border: 2px solid;
+          border-radius: 5px;
+         }
+         form{
+          display: grid;
+          grid-template-columns: 300px 300px 300px 300px;
+          grid-template-rows: 100px 100px 100px;
+          column-gap: 40px;
+          margin: 40px 150px;
+          border: 2px solid;
+          box-shadow: 10px 10px 5px rgb(96, 96, 182);
+          padding: 40px;
+          border-radius: 15px;
+         }
+         #btn{
+          height: 40px;
+          width: 150px;
+          background-color: black;
+          color: white;
+          border-radius: 10px;
+          font-size: 20px;
+         }
+</style>
+<h1 style="text-align: center; color: rgb(49, 49, 102);">Registration Form</h1>
+     <form action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{form.as_p}}  
+          <button id="btn" type="submit">submit</button>
+     </form>
+{% endblock content %}

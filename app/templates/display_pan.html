@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          #main{
+               width: 90vh;
+               border: 2px solid;
+               margin-left: 20%;
+          }
+          nav{
+               height: 100px;
+               display: flex;
+               justify-content: space-evenly;
+               background-color: lightblue;
+               padding: 10px;
+          }
+          td:first-child{
+               height: 50px;
+               width: 200px;
+               /* border: 2px solid; */
+               background-color: lightblue;
+          }
+          td:last-child{
+               height: 50px;
+               width: 600px;
+               /* border: 2px solid; */
+               background-color: lightblue;
+          } 
+       
+     </style>
+</head>
+<body>
+     <div style="background-color: orange; height: 90px;">
+          <img style="margin-top: 20px; margin-left: 100px;" src="https://www.onlineservices.nsdl.com/paam/assets/images/logo_light.png" alt="">
+     </div>
+     <div style="background-color: wheat; height: 50px; margin-top: -18px; ">
+       <h3 style="margin-left: 150px; padding-top: 15px;"><a href="{% url 'home_page' %}">Home</a></h3>
+     </div>
+     <br>
+     <div id="main">
+          <nav>
+               <div>
+               <h1>आयकर विभाग</h1>
+               <h4>INCOME TAX DEPARTMENT</h4>
+                </div>
+                <img height="100px" width="80px" src="https://tse4.mm.bing.net/th?id=OIP.dN1I3NCWtuLPTromGhEpbgHaJ-&pid=Api&P=0&h=180" alt="">
+                <div>
+                    <h2>भारत सरकार</h2>
+                    <h4>GOVT.OF INDIA</h4>
+                </div>
+          </nav>
+          <div style="text-align: center; background-color: lightblue; margin-top: -15px; height: 70px;">
+               <h4 style="padding-top: 5px;">ई-स्थायी खाता संख्या (ई-पैन) कार्ड</h4>
+               <h3 style="color: rgb(83, 87, 170); margin-top: -10px;">e-Permanent Account Number (e-PAN) Card </h3>
+          </div>
+
+          <table cellspacing="4" cellpadding="7">
+               <tr>
+                    <td>पावती संख्या /Acknowledgement Number</td>
+                    <td><img src="https://tse3.mm.bing.net/th?id=OIP.dYgH_WMNlFf_cIPonDT5RwHaCw&pid=Api&P=0&h=180" height="40px" width="200px" alt=""></td>
+               </tr>
+               <tr>
+                    <td>नाम/Name</td>
+                    <td>{{data.last_name}} {{data.first_name}}</td>
+               </tr>
+               <tr>
+                    <td>पिता का नाम/Father's Name</td>
+                    <td>{{data.last_name}} {{data.father_name}}</td>
+               </tr>
+               <tr>
+                    <td>जन्म की तारीख/Date of Birth</td>
+                    <td>{{data.DOB}}</td>
+               </tr>
+               <tr>
+                    <td>लिंग/Gender</td>
+                    <td>{{data.gender}}</td>
+               </tr>
+               <tr>
+                    <td>संचार पता/Comm.Address</td>
+                    <td>{{data.address}} ,{{data.state}} , {{data.pin_code}}</td>
+               </tr>
+               <tr>
+                    <td><img src="{{data.photo.url}}" height="150px" width="150px" alt="photo"></td>
+                    <td><img src="https://tse4.mm.bing.net/th?id=OIP.ZFt9Ib6ypFgdYK14UxUAhwHaHa&pid=Api&P=0&h=180" height="100px" width="100px" alt="qrcode"> </td>
+               </tr>
+          </table>
+
+          <div style="padding: 0px 10px; padding-top: 15px;">
+               <p>=> Permanent Account Number(PAN) facilitate Income Tax Department linking of various documents, including payment of taxes ,assessment, tax demand, tax areas , matching of information and easy maintenance and retrieval of electronic information etc. relating to a taxpayer.</p>
+               <p>स्थायी खाता संख्या (पैन) आयकर विभाग को विभिन्न दस्तावेजों को जोड़ने में सुविधा प्रदान करती है, जिसमें करों का भुगतान, मूल्यांकन, कर मांग, कर क्षेत्र, जानकारी का मिलान और इलेक्ट्रॉनिक जानकारी का आसान रखरखाव और पुनर्प्राप्ति आदि शामिल हैं, जो एक करदाता से संबंधित हैं।</p>
+               <p>=> Quoting of PAN is now mandatory for several transactions specified under Income Tax Act,1961 (Refer Rule 114B of Income Tax Rules, 1962)</p>
+               <p>आयकर अधिनियम, 1961 के तहत निर्दिष्ट कई लेनदेनों के लिए पैन का उल्लेख करना अब अनिवार्य है (आयकर नियम, 1962 के नियम 114बी देखें)</p>
+               <p>=> possessing or using more than one PAN is against the law and many attract penalty of upto Rs.10,000.</p>
+               <p>एक से अधिक पैन का स्वामित्व या उपयोग करना कानून के विरुद्ध है और इसके लिए 10,000 रुपये तक का जुर्माना लगाया जा सकता है।</p>
+          </div>
+          <p>------------------------------------------------------------------cut-------------------------------------------------------------------------------------</p>
+          <div>
+               <img height="250px" width="420px" src="https://tse3.mm.bing.net/th?id=OIP.oc63xTi35b7nFCk_QYo-3wHaEn&pid=Api&P=0&h=180" alt="">
+               <img height="260px" width="400px" src="https://www.pancardapp.com/blog/wp-content/uploads/2019/06/new-pan-card-design-back-1024x665.png" alt="">
+          </div>
+
+          <img style='position: relative; top: -195px; left: 300px;' src="{{data.photo.url}}" height="90px" width="90px" alt="">
+          <img style="position: relative; top: -100px ; left: 200px;" src="https://tse4.mm.bing.net/th?id=OIP.ZFt9Ib6ypFgdYK14UxUAhwHaHa&pid=Api&P=0&h=180" height="90px" width="90px" alt="">
+          <div style="margin-top: -280px; margin-left: 10px;">
+          <p>नाम/Name: {{data.first_name}} {{data.last_name}}</p>
+          <p>पिता का नाम/Father's Name:{{data.father_name}}</p>
+          <h3>{{data.pan}}</h3>
+          <p>जन्म की तारीख/Date of Birth:{{data.DOB}}</p>
+          </div>
+     </div>
+</body>
+</html>

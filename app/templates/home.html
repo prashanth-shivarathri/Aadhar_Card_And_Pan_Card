@@ -1,0 +1,75 @@
+
+     <style>
+          #div1{
+               height: 600px;
+               width: 100%;
+               background-image: url(https://myaadhaar.uidai.gov.in/static/media/Blue_BackGround_3.573d8f2968a774f3816d.png);
+               background-repeat: no-repeat;
+               background-size: cover;
+               color: white;
+               display: flex;
+               justify-content: space-around;
+          }
+          
+          #div1 div{
+               margin-top: 80px;
+
+          }
+          #div1 h1{
+               font-size: 70px;
+          }
+          #div1 p{
+               font-size: 20px;
+          }
+          #lang{
+               display: flex;
+               justify-content: space-evenly;
+               margin: 0px 180px;
+               font-size: 22px;
+               margin-top: -80px;
+               color: white;
+          }
+         
+     </style>
+
+     {% extends 'main.html'%}
+     {% block content %}
+     <div id="main">
+          <div id="div1">
+               <div>
+                    <h1>Welcome to <br> myAadhar</h1>
+                    <p>Click on Login button to explore online demographics update service, <br> Aadhaar PVC card ordering & tracking, and more value-added services <br> offered by UIDAI. Your mobile number is required to be registered with the <br> Aadhaar to login.</p>
+               </div>
+               <div style="background-color: white; height: 400px; width: 350px; border-radius: 15px; padding:40px 60px; margin-right: 80px;">
+                    <img src="https://myaadhaar.uidai.gov.in/static/media/fingerPrint.54859169124a05ba0132.jpg" height="210px" width="180px" alt="">
+                    <br><br>
+                    <a href="{% url 'index' %}"><button style="height: 50px; width: 250px;background-image: conic-gradient(rgb(126, 187, 234),rgb(24, 24, 75)) ;color: white; font-size: 20px; border-radius: 5px; border: none;"><b>Register</b></button></a>
+               </div>
+          </div>
+          <div id="lang">
+               <b>English</b>
+               <b>हिंदी</b>
+               <b>বাংলা</b>
+               <b>ಕನ್ನಡ</b>
+               <b>ગુજરાતી</b>
+               <b>മലയാളം</b>
+               <b>मराठी</b>
+               <b>ଓଡ଼ିଆ</b>
+               <b>ਪੰਜਾਬੀ</b>
+               <b>தமிழ்</b>
+               <b>తెలుగు</b>
+               <b>اردو</b>
+          </div>
+     </div>
+     <div style="display: flex;justify-content: space-around;   margin:60px 300px ;">
+          <a href="{% url 'index' %}"><h2>New Registration</h2></a>
+          <a href="{% url 'download' %}"><h2>Download Aadhar</h2></a>
+          <a href="{% url 'pan' %}"><h2>Download Pan Card</h2></a>
+         
+     </div>
+  
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+     {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+{% extends 'main.html' %}
+{% block content %}
+<style>
+        form{
+                margin-left: 38%;
+        }
+        input{
+                height: 40px;
+                width: 300px;
+                border: 2px solid;
+                border-radius: 5px;
+        }
+        #btn1{
+                height: 40px;
+                width: 100px;
+                background-color: black;
+                color: white;
+                font-size: 20px;
+                border-radius: 10px;
+        }
+</style>
+<h2 style="text-align: center; color: rgb(57, 57, 108);">Download Your Aadhar Card</h2>
+<br>
+<form action="" method="post">
+        {% csrf_token %}
+        <input type="number" name="aadhar" placeholder="Enter Aadhar number" id="">
+       <button id="btn1" type="submit">search</button>
+</form>
+
+{% endblock content %}
